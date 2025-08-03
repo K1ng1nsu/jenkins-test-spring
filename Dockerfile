@@ -1,4 +1,4 @@
-# Stage 1: Build  
+# Stage 1: Build
 # OpenJDK 17 JDK 이미지를 사용하여 빌드 환경을 설정합니다.
 FROM openjdk:17-jdk-slim as build
 

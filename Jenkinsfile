@@ -37,7 +37,7 @@ pipeline {
                 script {
                     // 기존에 실행 중인 컨테이너가 있다면 중지하고 제거합니다.
                     // 컨테이너 이름은 자유롭게 지정할 수 있습니다.
-                    def containerId = sh(returnStdout: true, script: "docker ps -aq --filter name=^test-app-spring$").trim()
+                    def containerId = sh(returnStdout: true, script: "docker ps -aq --filter name=^test-app-spring\$").trim()
                     if (containerId) {
                         sh "docker stop ${containerId}"
                         sh "docker rm ${containerId}"

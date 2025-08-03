@@ -24,6 +24,7 @@ pipeline {
                 script {
                     // Dockerfile이 있는 디렉토리로 이동 (보통 프로젝트 루트)
                     // 현재 디렉토리에서 Docker 이미지를 빌드합니다.
+                    // -f 파일 빌드컨텍스트
                     sh "docker build -t ${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}  -f demo/Dockerfile  demo/"
                     // ${BUILD_NUMBER}는 Jenkins 빌드 번호를 사용하여 이미지 태그를 유니크하게 만듭니다.
                     // 필요에 따라 'latest' 태그도 추가할 수 있습니다.

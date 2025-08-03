@@ -16,7 +16,7 @@ RUN ./demo/gradlew bootJar --no-daemon
 # Stage 2: Run
 # JRE 17 이미지를 사용하여 애플리케이션 실행 환경을 만듭니다.
 # JRE 이미지는 JDK 이미지보다 훨씬 가볍습니다.
-FROM openjdk:17-jre-slim
+FROM openjdk:17-jdk-slim
 
 # JAR 파일을 복사할 디렉토리를 설정합니다.
 WORKDIR /app

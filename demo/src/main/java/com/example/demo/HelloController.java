@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping
     public String hello(){
+        // 의도적 코드 수정
         return "Hello World: v1";
     }
 }

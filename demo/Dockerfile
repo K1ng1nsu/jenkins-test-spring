@@ -8,6 +8,8 @@ WORKDIR /app
 # 프로젝트 소스 코드를 모두 컨테이너로 복사합니다.
 COPY . ./
 
+RUN chmod +x ./gradlew
+
 # Gradle Wrapper를 실행하여 프로젝트를 빌드합니다.
 # '--no-daemon' 옵션은 데몬 사용을 비활성화하여 빌드 속도를 높입니다.
 # 'bootJar' 태스크로 실행 가능한 JAR 파일을 생성합니다.

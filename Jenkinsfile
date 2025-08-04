@@ -55,7 +55,7 @@ pipeline {
                     // 새로운 Docker 컨테이너를 실행합니다.
                     // -p 80:8080 : 호스트의 80번 포트를 컨테이너의 8080번 포트에 매핑
                     // --name my-app-container : 컨테이너 이름 지정
-                    sh "docker run -d -p 8080:8080 --name test-app-spring ${DOCKER_IMAGE_NAME}:latest"
+                    sh "docker run --restart unless-stopped -d -p 8080:8080 --name test-app-spring ${DOCKER_IMAGE_NAME}:latest"
                 }
             }
         }
